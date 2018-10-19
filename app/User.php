@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Models\Product;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -19,6 +20,10 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password',
     ];
+
+    public function products(){
+        return $this->hasMany(Product::class);
+    }
 
     /**
      * The attributes that should be hidden for arrays.
