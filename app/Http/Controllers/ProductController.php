@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Requests\ProductRequest;
+use Symfony\Component\HttpFoundation\Response;
 use App\Http\Resources\Product\ProductResource;
 use App\Http\Resources\Product\ProductCollection;
 
@@ -86,7 +87,12 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        $request['detail'] = $request->description;
+        unset($request['description']);
         $product->update($request->all());
+        return response([
+            'data' => new ProductResource($product)
+        ],Response::HTTP_OK);
     }
 
     /**
