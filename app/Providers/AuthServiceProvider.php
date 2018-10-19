@@ -32,8 +32,14 @@ class AuthServiceProvider extends ServiceProvider
 
     public function boot(UrlGenerator $url)
     {
+        $this->registerPolicies();
+
+        Passport::routes();
         if(env('REDIRECT_HTTPS')){
             $url->formatScheme('https');
+            $this->registerPolicies();
+
+            Passport::routes();
         }
     }
 
@@ -46,6 +52,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         if(env('REDIRECT_HTTPS')){
         $this->app['request']->server->set('HTTPS',true);
+        
         }
     }
 }
