@@ -12,10 +12,11 @@
         "alrik11es/cowsayphp": "^1.2",
         "csanquer/pdo-service-provider": "~1.1dev",
         "fideloper/proxy": "^4.0",
+        "fzaninotto/faker": "^1.4",
         "laravel/framework": "5.7.*",
         "laravel/passport": "^7.0",
         "laravel/tinker": "^1.0",
-        "fzaninotto/faker": "^1.4"
+        "league/flysystem": "^1.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
