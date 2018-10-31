@@ -46,7 +46,7 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-using postman
+I am using Postman u can use anyone like insomnia
 
 ### create user token for create update and delete operation
 
@@ -71,17 +71,19 @@ Body(put your details [Nb: password allows be 'secret' if you are using seed com
 
 ## Break down into end to end tests
 
-###Get all products
+Flow below instraction for test your API 
+
+### Get all products
 ```
 (GET) http://localhost:8000/api/products
 ```
 
-###Get single products
+### Get single products
 ```
 (GET) http://localhost:8000/api/products/1
 ```
 
-###create products
+### Create products
 ```
 (POST) http://localhost:8000/api/products
 
