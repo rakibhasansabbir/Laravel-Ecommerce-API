@@ -48,18 +48,17 @@ End with an example of getting some data out of the system or using it for a lit
 
 using postman
 
-create user token for create update and delete operation
+### create user token for create update and delete operation
 
 -> (POST)localhost:8000/oauth/token
+
 Headers
------------
 ```
 Accept : application/json
 Content-Type : application/json
 ```
 
 Body(put your details [Nb: password allows be 'secret' if you are using seed command] )
------
 ```
 {
 	"grant_type" : "password",
@@ -70,20 +69,19 @@ Body(put your details [Nb: password allows be 'secret' if you are using seed com
 }
 ```
 
-### Break down into end to end tests
+## Break down into end to end tests
 
-Get all products
+###Get all products
 ```
 (GET) http://localhost:8000/api/products
 ```
 
-Get single products
+###Get single products
 ```
 (GET) http://localhost:8000/api/products/1
 ```
 
-create products
------------------
+###create products
 ```
 (POST) http://localhost:8000/api/products
 
@@ -103,23 +101,23 @@ Body(put your details)
 }
 ```
 
-update product 
+### Update product 
 ```
 same as create only change request post to put
 ```
 
-Delete product
+### Delete product
 ```
 (DELETE) http://localhost:8000/api/products/2
 also need some headers as like as product create 
 ```
 
-Get all reviews in particular product
+### Get all reviews in particular product
 ```
 (GET) http://localhost:8000/api/products/1/reviews
 ```
 
-Create review
+### Create review
 ```
 (POST) http://localhost:8000/api/products/1/reviews
 
@@ -131,7 +129,7 @@ Body(put your details)
 }
 ```
 
-Delete review
+### Delete review
 ```
 (DELETE) http://localhost:8000/api/products/1/reviews/501
 ```
@@ -140,8 +138,8 @@ Delete review
 Explain what these tests test and why
 
 ```
-Give an example
-```
+example cumming soon
+`` `
 
 ## Deployment
 
