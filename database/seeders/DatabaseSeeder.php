@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use App\User;
 use App\Models\Review;
 use App\Models\Product;
@@ -15,8 +17,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        factory(User::class,10)->create();
-        factory(Product::class,100)->create();
-        factory(Review::class,500)->create();
+        User::factory(10)->create();
+        Product::factory(100)->create();
+        Review::factory(500)->create();
     }
 }
