@@ -1,5 +1,5 @@
 # Laravel-Ecommerce-API
-full RestFull business to business API Using Passport
+Simple and robust e-commerce API to assist those who are just getting started.
 
 
 ## Getting Started
