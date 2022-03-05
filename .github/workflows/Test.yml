@@ -30,8 +30,7 @@ jobs:
       - name: Verify MySQL connection
         run: |
           mysql --version
-          sudo apt-get install mysql-common
-          sudo apt-get install mysql-client
+          sudo apt-get install -y default-mysql-client
           mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports[3306] }} -uroot -ppassword -e "SHOW DATABASES"
       - name: Checkout code
         uses: actions/checkout@v2
