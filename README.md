@@ -12,7 +12,7 @@ What things you need to install the software and how to install them
 
 ```
 Laravel
-PHP 7+
+PHP 8.1+
 mysql
 
 ```
